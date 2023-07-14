@@ -1,0 +1,46 @@
+<html>
+<head>
+  
+ <style>
+   body
+{
+  background-image: url('https://www.desktopbackground.org/download/o/2014/12/10/869260_scientific-dna-wallpapers-2015-wallpapers-cave_2560x1600_h.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+}
+ </style>
+<script>
+know={
+    "hi":"&nbsp &nbsp &nbsp &nbsp &nbsp hello",
+"hello":"&nbsp &nbsp &nbsp &nbsp &nbsp hi dear !",
+"how are you":"&nbsp &nbsp &nbsp &nbsp &nbsp i am fine...please. tell me your problem",
+"i am shufring from fever":"&nbsp &nbsp &nbsp &nbsp &nbsp please contect us our docters"
+};
+function talk(){
+var user = document.getElementById("userbox").value;
+document.getElementById("userbox").value="";
+document.getElementById("chatlog").innerHTML +=user+ "<br>";
+if(user in know){
+document.getElementById("chatlog").innerHTML += know[user]+"<br>";
+}else
+{
+document.getElementById("chatlog").innerHTML="please ask another quetion...<br>";
+}}
+</script>
+</head>
+<body bgcolor="gray">
+  <table border="2" width="100%">
+<tr>
+<th style="color:rgb(248, 12, 12);">LIVE CHAT</th>
+</tr>
+<tr><th>
+<p id="chatlog">:Live chat<br></p><br>
+<input id="userbox" type="text" onkeydown="if(event.keyCode==13) {talk()}">
+</th>
+</tr>
+
+</table>
+</body>
+
+</html>
